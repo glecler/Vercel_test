@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS keys (
+    id TEXT PRIMARY KEY,
+    word TEXT NOT NULL
+);
+
+INSERT INTO keys (id, word)
+VALUES ('id_237429', 'Bingo')
+ON CONFLICT (id) DO UPDATE SET word = EXCLUDED.word;
